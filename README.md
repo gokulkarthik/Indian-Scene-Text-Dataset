@@ -4,7 +4,8 @@ The Indian scene text dataset has been generated as part of the work towards [In
 1. **Text Detection:** Detecting bounding boxes containing text in the images
 2. **Text Recognition:** Getting the text from the detected crop 
 3. **Translation:** Translating text from one Indian language to other Indian language
-![Pipeline for Sign Board translation](../Images/Pipeline.jpg)
+
+![Pipeline for sign board translation](../blob/master/Images/Pipeline.jpg)
 
 
 ## Detection & Recognition Dataset 
