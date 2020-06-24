@@ -19,7 +19,7 @@ Currently, this repository has links to download dataset zip files for 5 Indian 
 |Download Link              |# Images in Train|# Images in Val|# Images in Test|
 |:-------------------------:|:---------------:|:-------------:|:--------------:|
 |[Tamil][Tamil Zip]         |500000           |5000           |5000            | 
-|[Hind][Hindi Zip]          |500000           |5000           |5000            | 
+|[Hindi][Hindi Zip]          |500000           |5000           |5000            | 
 |[Telugu][Telugu Zip]       |400000           |5000           |5000            | 
 |[Malayalam][Malayalam Zip] |400000           |5000           |5000            | 
 |[Punjabi][Punjabi Zip]     |~400000           |5000           |5000            | 
