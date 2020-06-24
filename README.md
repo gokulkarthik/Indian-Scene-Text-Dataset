@@ -8,16 +8,25 @@ The Indian scene text dataset has been generated as part of the work towards [In
 ![Pipeline for sign board translation](../master/Images/Pipeline.jpg)
 
 
-## Detection & Recognition Dataset 
+# Detection & Recognition Dataset 
  [Shubham Patel](https://www.linkedin.com/in/shubhampateliet/) and [Jaya Ingle](https://www.linkedin.com/in/inglejaya95/) have synthetically generated the [Indian language text detection & recognition dataset](https://drive.google.com/folderview?id=1hnNxuHbBBZrrI7Ee6FePTsUfW97qrJAS) based on [SynthText](http://www.robots.ox.ac.uk/~vgg/data/scenetext/) while at IIT Madras. This synthetic detection & recognition dataset is a collection of images where in word instances of specific Indian languages are placed over natural scences. Each image has a corresponding annotation csv file that lists the bounding box coordinates for each word instance in that image. Check the sample images in the dataset below: 
 Sample - Tamil            |  Sample - Hindi
 :------------------------:|:------------------------:
 ![Sample - Tamil](../master/Images/Tamil-Detection-Recognition.jpg)  |  ![Sample - Hindi](../master/Images/Hindi-Detection-Recognition.jpg)
 
-## Recognition Dataset
-I have compiled a new dataset for the recognition task alone from the above detection & recognition dataset. 
+# Recognition Dataset
+I have compiled a new dataset for the recognition task alone from the above detection & recognition dataset. This will be helpful to those who intend to build a recognition model alone, by saving a lot of time in data preparation. The code used to generate this recognition dataset is available in the form of jupyter notebooks, [1-Define-Char-Maps.ipynb](../master/1-Define-Char-Maps.ipynb) & [2-Prepare-Dataset.ipynb](../master/2-Prepare-Dataset.ipynb). 
 
-### Recognition Dataset Download Links
+**1. Character Map Definition** <br>
+Most of the popular Indian languages comprise of compound characters which can be formed by merging two base characters, usually a consonant and a glyph. Such a Character-Consonant-Glyph mapping has been generated for the languages *Tamil*, *Hindi*, *Telugu*, *Malayalam* and *Punjabi* and available in the [characters directory](Characters). Identifification of such map will let us do **multi-label classification**(consonant-glyph classfication) over a simple character classification in the text recognition task. Check the sample rows of character mapping below:
+|Sample - Tamil            |Sample - Hindi            |Sample - Telugu           |Sample - Malayalam        |Sample - Punjabi          |
+|:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
+|![Sample - Tamil](../master/Images/Tamil-Character-Map.png) |![Sample - Hindi](../master/Images/Hindi-Character-Map.png) |![Sample - Telugu](../master/Images/Telugu-Character-Map.png) |![Sample - Malayalam](../master/Images/Malayalam-Character-Map.png) |![Sample - Punjabi](../master/Images/Punjabi-Character-Map.png) |
+
+**2. Dataset Preparation** <br>
+This involves cropping the bounding rectangle of the text instance in the detection & recognition dataset images and resizing them to the common size of (200, 50).  Filtering is done to drop the improper/impure text label examples. For example, *Tamil* word instances has been observed in *Telugu* and *Malayalam* detection & recognition dataset. Such images are ignored. Train-Val-Test split is also done in this stage.
+
+## Recognition Dataset Download Links
 Currently, this repository has links to download dataset zip files for 5 Indian languages namely *Tamil*, *Hindi*, *Telugu*, *Malayalam* and *Punjabi*. After the extraction of a zip file, you can find 3 data split folders namely *Train*, *Val* and *Test*. Each of these folders has a collection of uniform size (width: 200, height:50) cropped images named with text label. The text before the first underscore('\_') in the image name represents the indian language text in the image. 
 |Download Link              |# Images in Train |# Images in Val |# Images in Test |Image Sample                                          |Image Sample Word Instance |
 |:-------------------------:|:----------------:|:--------------:|:---------------:|:----------------------------------------------------:|---------|
