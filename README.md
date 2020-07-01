@@ -93,14 +93,17 @@ Most of the popular Indian languages comprise of compound characters which can b
 |Sample - Tamil            |Sample - Hindi            |Sample - Telugu           |Sample - Malayalam        |Sample - Punjabi          |
 |:------------------------:|:------------------------:|:------------------------:|:------------------------:|:------------------------:|
 |![Sample - Tamil](../master/Images/Tamil-Character-Map.png) |![Sample - Hindi](../master/Images/Hindi-Character-Map.png) |![Sample - Telugu](../master/Images/Telugu-Character-Map.png) |![Sample - Malayalam](../master/Images/Malayalam-Character-Map.png) |![Sample - Punjabi](../master/Images/Punjabi-Character-Map.png) |
+
 **Code:** [Define-Char-Maps.ipynb](../master/Define-Char-Maps.ipynb)
 
 **2. V1 Dataset Preparation** <br>
 This involves cropping the bounding rectangle of the text instance in the detection & recognition dataset images and resizing them to the common size of (200, 50).  Filtering is done to drop the improper/impure text label examples using the character map defined above. For example, *Tamil* word instances has been observed in *Telugu* and *Malayalam* detection & recognition dataset. Such images are ignored. Train-Val-Test split is also done in this stage.
+
 **Code:** [Prepare-Recognition-Dataset.ipynb](../master/Prepare-Recognition-Dataset.ipynb)
 
 **3. V2 Dataset Preparation** <br>
 While evaluating the recognition model, we observed out that there are many images (roughly around 30%) that are not even human recognizable in `D3` which caused the poor test performance. Hence, we manually labelled 5000 images in `D3-Hindi-Test` set and trained a neural network to classify ambiguous and non-ambiguous cropped images. The trained model can be found in [Models/Ambiguity-Classifier.pth](../master/Models/Ambiguity-Classifier.pth). We used this model to filter out the ambiguous images in `D3-V2`.
+
 **Code:** [Prepare-Recognition-Dataset-V2.ipynb](../master/Prepare-Recognition-Dataset-V2.ipynb)
 
 
