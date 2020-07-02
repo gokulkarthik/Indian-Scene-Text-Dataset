@@ -102,7 +102,7 @@ This involves cropping the bounding rectangle of the text instance in the detect
 **Code:** [Prepare-Recognition-Dataset.ipynb](../master/Prepare-Recognition-Dataset.ipynb)
 
 **3. V2 Dataset Preparation** <br>
-While evaluating the recognition model, we observed out that there are many images (roughly around 30%) that are not even human recognizable in `D3` which caused the poor test performance. Hence, we manually labelled 5000 images in `D3-Hindi-Test` set and trained a neural network to classify ambiguous and non-ambiguous cropped images. The trained model can be found in [Models/Ambiguity-Classifier.pth](../master/Models/Ambiguity-Classifier.pth). We used this model to filter out the ambiguous images in `D3-V2`.
+While evaluating the recognition model, we observed out that there are many images (roughly around 30%) that are not even human recognizable in `D3` which caused the poor test performance. Hence, we manually labelled 5000 images in `D3-Hindi-Test` set and trained a neural network to classify ambiguous and non-ambiguous cropped images. The trained model can be found in [`Models/Ambiguity-Classifier.pth`](../master/Models/Ambiguity-Classifier.pth). We used this model to filter out the ambiguous images in `D3-V2`.
 
 **Code:** [Prepare-Recognition-Dataset-V2.ipynb](../master/Prepare-Recognition-Dataset-V2.ipynb)
 
