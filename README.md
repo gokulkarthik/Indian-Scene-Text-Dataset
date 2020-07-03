@@ -23,7 +23,7 @@ I compiled new standalone datasets for the isolated tasks in the Indian Signboar
 
 # `D1`: Detection Dataset
 <!----------------------->
-`D1` is filtered and processed from `D`. This include images with text instances from the language set `L` comprising **Tamil, Hindi, Telugu, Malayalam, and  Punjabi.** Images are resized to the common shape with width of 600 pixels and height of 450 pixels. And, the bounding box coordinates are processed accordingly and made availabe in 2 geometries namely **Quadilateral(QUAD)** and **Axes-Aligned-Bounding-Box(AABB)**. A bigger size variant(`D1-Big`) of this dataset is also created.
+`D1` is filtered and processed from `D`. This include images with text instances from the language set `L` comprising **Tamil, Hindi, Telugu, Malayalam, and  Punjabi.** Images are resized to the common shape with width of 640 pixels and height of 480 pixels. And, the bounding box coordinates are processed accordingly and made availabe in 2 geometries namely **Quadilateral(QUAD)** and **Axes-Aligned-Bounding-Box(AABB)**. A bigger size variant(`D1-Big`) of this dataset is also created.
 
 It has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordiantes for the four corner points of the bounding boz are available.  
 
