@@ -25,14 +25,17 @@ I compiled new standalone datasets for the isolated tasks in the Indian Signboar
 <!----------------------->
 `D1` is filtered and processed from `D`. This include images with text instances from the language set `L` comprising **Tamil, Hindi, Telugu, Malayalam, and  Punjabi.** Images are resized to the common shape with width of 320 pixels and height of 320 pixels. And, the bounding box coordinates are processed accordingly and made availabe in 2 geometries namely **Quadilateral(QUAD)** and **Axes-Aligned-Bounding-Box(AABB)**. A bigger size variant(`D1-Big`) of this dataset is also created.
 
-It has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordiantes for the four corner points of the bounding boz are available.  
+English detection dataset (`D1-English`) is sourced from ICDAR 2015 Incidental Scene Text Dataset[1] and preprocessed to be in format with Indian Language Detection Datasets.
+
+The dataset directory has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordiantes for the four corner points of the bounding boz are available.  
 
 Images are sampled uniformally in each data split with respect to the languages.
 
-|Download Link              |# Images in Train |# Images in Val |# Images in Test |
-|:-------------------------:|:----------------:|:--------------:|:---------------:|
-|[`D1`][D1 Zip]             |10000             |1000            |1000             |
-|[`D1-Big`][D1-Big Zip]     |50000             |1000            |1000             |
+|Download Link                 |# Images in Train |# Images in Val |# Images in Test |
+|:----------------------------:|:----------------:|:--------------:|:---------------:|
+|[`D1`][D1 Zip]                |10000             |1000            |1000             |
+|[`D1-Big`][D1-Big Zip]        |50000             |1000            |1000             |
+|[`D1-English`][D1-English Zip]|1000              |200             |200              |
 
 |Image Sample                                          |AABB Representation |QUAD Representation |
 |:----------------------------------------------------:|:------------------:|:------------------:|
@@ -114,9 +117,12 @@ While evaluating the recognition model, we observed out that there are many imag
 4. [Indian Scene Text Classification](https://github.com/GokulKarthik/Indian-Scene-Text-Classification)
 5. [Indian Scene Text Recognition](https://github.com/GokulKarthik/Indian-Scene-Text-Recognition)
 
+### References:
+1. https://rrc.cvc.uab.es/?ch=4
 
 [D1 Zip]: https://drive.google.com/file/d/1xHhe1VfEKRElkbYXzcIyN520Nqqdjpze/view?usp=sharing
 [D1-Big Zip]: https://drive.google.com/file/d/1c8BjyMRO_I_ZotNbwiFRZPE6TmbJG1Uz/view?usp=sharing
+[D1-English Zip]: https://drive.google.com/file/d/1XbpfPw1Tscc2n0MFiYCAr8eJ_Ca8DURv/view?usp=sharing
 [D2 Zip]: https://drive.google.com/file/d/1FBwhm5IhnZXEKQxQEPdiq5kGFfI4z94D/view?usp=sharing
 [D3-Tamil Zip]: https://drive.google.com/file/d/1l0ifp-ny0Ssy8APjTaYDzoq2MNMf4PfH/view?usp=sharing
 [D3-Hindi Zip]: https://drive.google.com/file/d/1iYX4SdF07brsn2F4NkwjvmWG4unn6IBv/view?usp=sharing
