@@ -25,7 +25,7 @@ I compiled new standalone datasets for the isolated tasks in the Indian Signboar
 <!----------------------->
 `D1` is filtered and processed from `D`. This include images with text instances from the language set `L` comprising **Tamil, Hindi, Telugu, Malayalam, and  Punjabi.** Images are resized to the common shape with width of 320 pixels and height of 320 pixels. And, the bounding box coordinates are processed accordingly and made availabe in 2 geometries namely **Quadilateral(QUAD)** and **Axes-Aligned-Bounding-Box(AABB)**. A bigger size variant(`D1-Big`) of this dataset is also created.
 
-English detection dataset (`D1-English`) is sourced from ICDAR 2015 Incidental Scene Text Dataset[1] and preprocessed to be in format with Indian Language Detection Datasets.
+English detection dataset (`D1-English`) is sourced from ICDAR 2015 Incidental Scene Text Dataset [1] and preprocessed to be in format with Indian Language Detection Datasets.
 
 The dataset directory has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordiantes for the four corner points of the bounding boz are available.  
 
@@ -47,6 +47,8 @@ Images are sampled uniformally in each data split with respect to the languages.
 # `D2`: Classification Dataset
 <!--------------------------->
 `D2` is filtered from `D3`. It has cropped image examples having word instances from the language set `L`.  
+
+Similarly `D2-English` is filtered from `D3-English` [2]
 
 It has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has a sub folder for each language in the language set `L`.
 
@@ -73,6 +75,8 @@ Images are sampled uniformally in each data split with respect to the languages.
 
 `D3` for each language in `L`, (`D3-Language`) has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these data split folders, has a collection of uniform size cropped images, with the width of 200 pixels and height of 50 pixels, named with text label. The text before the first underscore('\_') in the image name represents the indian language text in the image. 
 
+`D3-English` is sourced from [Oxford's Synthetic Word Dataset](https://www.robots.ox.ac.uk/~vgg/data/text/) and preprocessed to be in format with Indian Language Recognition Datasets.
+
 |Download Link                    |# Images in Train |# Images in Val |# Images in Test |Image Sample                                          |Image Sample Word Instance |
 |:-------------------------------:|:----------------:|:--------------:|:---------------:|:----------------------------------------------------:|:-------:|
 |[D3-Tamil][D3-Tamil Zip]         |500000            |5000            |5000             |![Image Sample](../master/Images/அகரம்_30_670_0.jpg)  |அகரம்    |
@@ -80,6 +84,7 @@ Images are sampled uniformally in each data split with respect to the languages.
 |[D3-Telugu][D3-Telugu Zip]       |400000            |5000            |5000             |![Image Sample](../master/Images/అజయ్_25_2491_2.jpg)  |అజయ్     |
 |[D3-Malayalam][D3-Malayalam Zip] |400000            |5000            |5000             |![Image Sample](../master/Images/അകവൂർ_22_2655_0.jpg) |അകവൂർ    |
 |[D3-Punjabi][D3-Punjabi Zip]     |399989            |5000            |5000             |![Image Sample](../master/Images/ਉਸਦੇ_30_3782_1.jpg)   |ਉਸਦੇ      |
+|[D3-English][D3-English Zip]     |500000            |5000            |5000             |![Image Sample](../master/Images/)   |     |
 
 |Download Link                          |# Images in Train |# Images in Val |# Images in Test |Image Sample                                          |Image Sample Word Instance |
 |:-------------------------------------:|:----------------:|:--------------:|:---------------:|:----------------------------------------------------:|:-------:|
@@ -119,6 +124,7 @@ While evaluating the recognition model, we observed out that there are many imag
 
 ### References:
 1. https://rrc.cvc.uab.es/?ch=4
+2. M. Jaderberg, K. Simonyan, A. Vedaldi, A. Zisserman, "Synthetic Data and Artificial Neural Networks for Natural Scene Text Recognition", NIPS Deep Learning Workshop, 2014
 
 [D1 Zip]: https://drive.google.com/file/d/1xHhe1VfEKRElkbYXzcIyN520Nqqdjpze/view?usp=sharing
 [D1-Big Zip]: https://drive.google.com/file/d/1c8BjyMRO_I_ZotNbwiFRZPE6TmbJG1Uz/view?usp=sharing
@@ -129,6 +135,7 @@ While evaluating the recognition model, we observed out that there are many imag
 [D3-Telugu Zip]: https://drive.google.com/file/d/1Rx-jT_4rvK4cdeSVS_j4q598DzA1bxN4/view?usp=sharing
 [D3-Malayalam Zip]: https://drive.google.com/file/d/1HfGNsNAMVeP17kDaZA8C52z_HvBa-QpH/view?usp=sharing
 [D3-Punjabi Zip]: https://drive.google.com/file/d/1V8ummr3nCnO32Qm8igJRXdr7sgpQE-g8/view?usp=sharing
+[D3-English Zip]: #
 [D3-Tamil-V2 Zip]: https://drive.google.com/file/d/1z-tjkTxtF1SjY8vxEGq1Qnql55kOHVqk/view?usp=sharing
 [D3-Hindi-V2 Zip]: https://drive.google.com/file/d/1eanV3SBoNd-igHe3mZNLEYfSGeXK9VPb/view?usp=sharing
 [D3-Telugu-V2 Zip]: https://drive.google.com/file/d/10fRAkQIQMT_FjLM-GNITFxb8-5NtSm6-/view?usp=sharing
