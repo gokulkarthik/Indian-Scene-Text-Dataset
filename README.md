@@ -54,9 +54,10 @@ It has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these fol
 
 Images are sampled uniformally in each data split with respect to the languages.
 
-|Download Link              |# Images in Train |# Images in Val |# Images in Test |
-|:-------------------------:|:----------------:|:--------------:|:---------------:|
-|[`D2`][D1 Zip]             |25000             |1000            |1000             |
+|Download Link                  |# Images in Train |# Images in Val |# Images in Test |
+|:-----------------------------:|:----------------:|:--------------:|:---------------:|
+|[`D2`][D2 Zip]                 |25000             |1000            |1000             |
+|[`D2-English`][D2-English Zip] |5000              |200             |200              |
 
 |Image Sample                                          |Class / Language |
 |:----------------------------------------------------:|:---------------:|
@@ -65,6 +66,7 @@ Images are sampled uniformally in each data split with respect to the languages.
 |![Image Sample](../master/Images/అజయ్_25_2491_2.jpg)  |Telugu           |
 |![Image Sample](../master/Images/അകവൂർ_22_2655_0.jpg) |Malayalam        |
 |![Image Sample](../master/Images/ਉਸਦੇ_30_3782_1.jpg)   |Punjabi          |
+|![Image Sample](../master/Images/bombs_145_8619.jpg)  |English          |
 
 **Code:** [Prepare-Classification-Dataset.ipynb](../master/Prepare-Classification-Dataset.ipynb)
 
@@ -84,7 +86,7 @@ Images are sampled uniformally in each data split with respect to the languages.
 |[D3-Telugu][D3-Telugu Zip]       |400000            |5000            |5000             |![Image Sample](../master/Images/అజయ్_25_2491_2.jpg)  |అజయ్     |
 |[D3-Malayalam][D3-Malayalam Zip] |400000            |5000            |5000             |![Image Sample](../master/Images/അകവൂർ_22_2655_0.jpg) |അകവൂർ    |
 |[D3-Punjabi][D3-Punjabi Zip]     |399989            |5000            |5000             |![Image Sample](../master/Images/ਉਸਦੇ_30_3782_1.jpg)   |ਉਸਦੇ      |
-|[D3-English][D3-English Zip]     |500000            |5000            |5000             |![Image Sample](../master/Images/)   |     |
+|[D3-English][D3-English Zip]     |500000            |5000            |5000             |![Image Sample](../master/Images/bombs_145_8619.jpg)  |bombs     |
 
 |Download Link                          |# Images in Train |# Images in Val |# Images in Test |Image Sample                                          |Image Sample Word Instance |
 |:-------------------------------------:|:----------------:|:--------------:|:---------------:|:----------------------------------------------------:|:-------:|
@@ -107,7 +109,9 @@ Most of the popular Indian languages comprise of compound characters which can b
 **2. V1 Dataset Preparation** <br>
 This involves cropping the bounding rectangle of the text instance in the detection & recognition dataset images and resizing them to the common size of (200, 50).  Filtering is done to drop the improper/impure text label examples using the character map defined above. For example, *Tamil* word instances has been observed in *Telugu* and *Malayalam* detection & recognition dataset. Such images are ignored. Train-Val-Test split is also done in this stage.
 
-**Code:** [Prepare-Recognition-Dataset.ipynb](../master/Prepare-Recognition-Dataset.ipynb)
+**Code:** 
+* [Prepare-Recognition-Dataset.ipynb](../master/Prepare-Recognition-Dataset.ipynb)
+* [Prepare-Recognition-Dataset-English.ipynb](../master/Prepare-Recognition-Dataset-English.ipynb)
 
 **3. V2 Dataset Preparation** <br>
 While evaluating the recognition model, we observed out that there are many images (roughly around 30%) that are not even human recognizable in `D3` which caused the poor test performance. Hence, we manually labelled 5000 images in `D3-Hindi-Test` set and trained a neural network to classify ambiguous and non-ambiguous cropped images. The trained model can be found in [`Models/Ambiguity-Classifier.pth`](../master/Models/Ambiguity-Classifier.pth). We used this model to filter out the ambiguous images in `D3-V2`.
@@ -130,6 +134,7 @@ While evaluating the recognition model, we observed out that there are many imag
 [D1-Big Zip]: https://drive.google.com/file/d/1c8BjyMRO_I_ZotNbwiFRZPE6TmbJG1Uz/view?usp=sharing
 [D1-English Zip]: https://drive.google.com/file/d/1XbpfPw1Tscc2n0MFiYCAr8eJ_Ca8DURv/view?usp=sharing
 [D2 Zip]: https://drive.google.com/file/d/1FBwhm5IhnZXEKQxQEPdiq5kGFfI4z94D/view?usp=sharing
+[D2-English Zip]: #
 [D3-Tamil Zip]: https://drive.google.com/file/d/1l0ifp-ny0Ssy8APjTaYDzoq2MNMf4PfH/view?usp=sharing
 [D3-Hindi Zip]: https://drive.google.com/file/d/1iYX4SdF07brsn2F4NkwjvmWG4unn6IBv/view?usp=sharing
 [D3-Telugu Zip]: https://drive.google.com/file/d/1Rx-jT_4rvK4cdeSVS_j4q598DzA1bxN4/view?usp=sharing
