@@ -140,7 +140,7 @@ While evaluating the recognition model, we observed out that there are many imag
 [D3-Telugu Zip]: https://drive.google.com/file/d/1Rx-jT_4rvK4cdeSVS_j4q598DzA1bxN4/view?usp=sharing
 [D3-Malayalam Zip]: https://drive.google.com/file/d/1HfGNsNAMVeP17kDaZA8C52z_HvBa-QpH/view?usp=sharing
 [D3-Punjabi Zip]: https://drive.google.com/file/d/1V8ummr3nCnO32Qm8igJRXdr7sgpQE-g8/view?usp=sharing
-[D3-English Zip]: #
+[D3-English Zip]: https://drive.google.com/file/d/1dW3EMkODbuwtQl-wZ4m3md9OBfq_imFk/view?usp=sharing
 [D3-Tamil-V2 Zip]: https://drive.google.com/file/d/1z-tjkTxtF1SjY8vxEGq1Qnql55kOHVqk/view?usp=sharing
 [D3-Hindi-V2 Zip]: https://drive.google.com/file/d/1eanV3SBoNd-igHe3mZNLEYfSGeXK9VPb/view?usp=sharing
 [D3-Telugu-V2 Zip]: https://drive.google.com/file/d/10fRAkQIQMT_FjLM-GNITFxb8-5NtSm6-/view?usp=sharing
