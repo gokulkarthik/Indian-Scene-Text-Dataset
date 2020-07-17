@@ -27,7 +27,7 @@ I compiled new standalone datasets for the isolated tasks in the Indian Signboar
 
 English detection dataset (`D1-English`) is sourced from ICDAR 2015 Incidental Scene Text Dataset [1] and preprocessed to be in format with Indian Language Detection Datasets.
 
-The dataset directory has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordiantes for the four corner points of the bounding boz are available.  
+The dataset directory has 3 top level folders, namely, `Train`, `Val` and `Test`. Each of these folders has 3 sub folders, namely, `Images`, `Annotations-AABB` and `Annotations-QUAD`. For each image in the `Images` folder, you can find the corresponding annotation csv files in the folders `Annotations-AABB` and `Annotations-QUAD` with the same name. In `AABB` representation, the *x*, *y* in the top left coordinate in the bounding box is available along with *w*(width) and *h*(height). In `QUAD` representation, *x* and *y* coordinates for the four corner points of the bounding box are available.  
 
 Images are sampled uniformally in each data split with respect to the languages.
 
