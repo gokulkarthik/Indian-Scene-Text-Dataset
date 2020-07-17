@@ -134,7 +134,7 @@ While evaluating the recognition model, we observed out that there are many imag
 [D1-Big Zip]: https://drive.google.com/file/d/1c8BjyMRO_I_ZotNbwiFRZPE6TmbJG1Uz/view?usp=sharing
 [D1-English Zip]: https://drive.google.com/file/d/1XbpfPw1Tscc2n0MFiYCAr8eJ_Ca8DURv/view?usp=sharing
 [D2 Zip]: https://drive.google.com/file/d/1FBwhm5IhnZXEKQxQEPdiq5kGFfI4z94D/view?usp=sharing
-[D2-English Zip]: #
+[D2-English Zip]: https://drive.google.com/file/d/12G3wRgDck7GE__m3LH0uCy13GL6brbwL/view?usp=sharing
 [D3-Tamil Zip]: https://drive.google.com/file/d/1l0ifp-ny0Ssy8APjTaYDzoq2MNMf4PfH/view?usp=sharing
 [D3-Hindi Zip]: https://drive.google.com/file/d/1iYX4SdF07brsn2F4NkwjvmWG4unn6IBv/view?usp=sharing
 [D3-Telugu Zip]: https://drive.google.com/file/d/1Rx-jT_4rvK4cdeSVS_j4q598DzA1bxN4/view?usp=sharing
